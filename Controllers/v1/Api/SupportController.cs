@@ -137,10 +137,35 @@ namespace MagicBoxAdminPortal.Controllers.v1.Api
         [HttpPost("IR_FlOW_Access_DB_Call")]
         public string IR_FlOW_Access_DB_Call(IRFlOWAccessDBCall iRFlOWAccessDBCall)
         {
-            // BaseResponse resp = new BaseResponse();
             string desc = _supportRepository.IR_FlOW_Access_DB_Call(iRFlOWAccessDBCall);
             return desc;
         }
-        
+
+        [HttpPost("Validate_LOGIN")]
+        public bool Validate_LOGIN(ValidateLOGIN validateLOGIN)
+        {
+            bool IsTrue = _supportRepository.Validate_LOGIN(validateLOGIN);
+            return IsTrue;
+        }
+        [HttpPost("Call_Report_Procedure")]
+        public DataSet Call_Report_Procedure(CallReportProcedure callReportProcedure, ref string msgOut)
+        {
+            DataSet DS = _supportRepository.Call_Report_Procedure(callReportProcedure , ref msgOut);
+            return DS;
+        }
+
+        [HttpPost("GetAPK_Data")]
+        public DataTable GetAPK_Data(string FileNo)
+        {
+            DataTable DT = _supportRepository.GetAPK_Data(FileNo);
+            return DT;
+        }
+        //void Insert_APK_Rec(string IMEI_No, string APK_VersionNo, string FileNo)
+
+        [HttpPost("Insert_APK_Rec")]
+        public void Insert_APK_Rec(string IMEI_No, string APK_VersionNo, string FileNo)
+        {
+            _supportRepository.Insert_APK_Rec(IMEI_No, APK_VersionNo, FileNo);
+        }
     }
 }

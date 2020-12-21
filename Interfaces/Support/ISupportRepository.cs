@@ -29,5 +29,13 @@ namespace MagicBoxAdminPortal.Interfaces.Support
         string DISABLE_AGENT_BVMT_FLOWS(int pBIT);
         string Ufone_JV_Access_DB_Call(string imei, string Ufno_JV);
         string IR_FlOW_Access_DB_Call(IRFlOWAccessDBCall iRFlOWAccessDBCall);
+
+        // login
+
+        bool Validate_LOGIN(ValidateLOGIN validateLOGIN);
+        DataSet Call_Report_Procedure(CallReportProcedure callReportProcedure, ref string msgOut);
+
+        DataTable GetAPK_Data(string FileNo);
+        void Insert_APK_Rec(string IMEI_No, string APK_VersionNo, string FileNo);
     }
 }

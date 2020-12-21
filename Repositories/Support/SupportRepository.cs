@@ -947,7 +947,6 @@ namespace MagicBoxAdminPortal.Repositories.Support
 
         }
 
-
         ////////CLSDB/////////////
 
         public BaseResponse GetAuthentication(string username, string pwd, string uSERID, string pAGES)
@@ -1364,7 +1363,6 @@ namespace MagicBoxAdminPortal.Repositories.Support
 
         ////////clsGeneral/////////////
 
-
         public DataTable Get_Retailer_Info(string imei)
         {
             BaseResponse response = new BaseResponse();
@@ -1714,6 +1712,358 @@ namespace MagicBoxAdminPortal.Repositories.Support
             }
 
             return desc;
+        }
+
+        // login
+
+        public bool Validate_LOGIN(ValidateLOGIN validateLOGIN)
+        {
+
+            try
+            {
+
+                OracleCommand cmd = new OracleCommand("PKG_MB_CONFIGURATIONS.PRC_FRONTEND_LOGIN");
+                cmd.CommandType = CommandType.StoredProcedure;
+
+
+                OracleParameter pram_IN_1 = new OracleParameter("pUser_Name", OracleDbType.Varchar2);
+                pram_IN_1.Direction = ParameterDirection.Input;
+                pram_IN_1.Value = validateLOGIN.UName;
+                cmd.Parameters.Add(pram_IN_1);
+
+                OracleParameter pram_IN_2 = new OracleParameter("PUSER_PWD", OracleDbType.Varchar2);
+                pram_IN_2.Direction = ParameterDirection.Input;
+                pram_IN_2.Value = validateLOGIN.Password;
+                cmd.Parameters.Add(pram_IN_2);
+
+                OracleParameter pram_IN_3 = new OracleParameter("pSession_ID", OracleDbType.Varchar2);
+                pram_IN_3.Direction = ParameterDirection.Input;
+                pram_IN_3.Value = validateLOGIN.SessionID;
+                cmd.Parameters.Add(pram_IN_3);
+
+
+
+                OracleParameter pram_OUT_12 = new OracleParameter("pAccess_Level_P", OracleDbType.Varchar2);
+                pram_OUT_12.Size = 1000;
+                pram_OUT_12.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_12);
+
+                OracleParameter pram_OUT_13 = new OracleParameter("pAccess_Level_R", OracleDbType.Varchar2);
+                pram_OUT_13.Size = 1000;
+                pram_OUT_13.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_13);
+
+                OracleParameter pram_OUT_14 = new OracleParameter("pUserRegion", OracleDbType.Varchar2);
+                pram_OUT_14.Size = 1000;
+                pram_OUT_14.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_14);
+
+                OracleParameter pram_OUT_0 = new OracleParameter("PIS_AUTHENTICATED", OracleDbType.Varchar2);
+                pram_OUT_0.Size = 1000;
+                pram_OUT_0.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_0);
+
+                OracleParameter pram_OUT_2 = new OracleParameter("pUSER_STATUS", OracleDbType.Varchar2);
+                pram_OUT_2.Size = 1000;
+                pram_OUT_2.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_2);
+
+                OracleParameter pram_OUT_3 = new OracleParameter("pRetryCount", OracleDbType.Varchar2);
+                pram_OUT_3.Size = 1000;
+                pram_OUT_3.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_3);
+
+                OracleParameter pram_OUT_4 = new OracleParameter("pPasswordChangeFlag", OracleDbType.Varchar2);
+                pram_OUT_4.Size = 1000;
+                pram_OUT_4.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_4);
+
+                OracleParameter pram_OUT_5 = new OracleParameter("pPasswordChangeDecs", OracleDbType.Varchar2);
+                pram_OUT_5.Size = 1000;
+                pram_OUT_5.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_5);
+
+                OracleParameter pram_OUT_6 = new OracleParameter("PSESSION_ID_OUT", OracleDbType.Varchar2);
+                pram_OUT_6.Size = 1000;
+                pram_OUT_6.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_6);
+
+                OracleParameter pram_OUT_7 = new OracleParameter("PFLAG", OracleDbType.Varchar2);
+                pram_OUT_7.Size = 1000;
+                pram_OUT_7.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_7);
+
+                OracleParameter pram_OUT_8 = new OracleParameter("PUSER_ID", OracleDbType.Varchar2);
+                pram_OUT_8.Size = 1000;
+                pram_OUT_8.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_8);
+
+                OracleParameter PMSISDN = new OracleParameter("PMSISDN", OracleDbType.Varchar2);
+                PMSISDN.Size = 1000;
+                PMSISDN.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(PMSISDN);
+
+                OracleParameter pram_OUT_9 = new OracleParameter("PCODE", OracleDbType.Varchar2);
+                pram_OUT_9.Size = 1000;
+                pram_OUT_9.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_9);
+
+                OracleParameter pram_OUT_10 = new OracleParameter("pDESC", OracleDbType.Varchar2);
+                pram_OUT_10.Size = 1000;
+                pram_OUT_10.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_10);
+
+                OracleParameter pram_OUT_11 = new OracleParameter("PMSG", OracleDbType.Varchar2);
+                pram_OUT_11.Size = 1000;
+                pram_OUT_11.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(pram_OUT_11);
+
+                ExecuteNonQuery(cmd);
+
+                validateLOGIN.Is_Autheticated = cmd.Parameters["PIS_AUTHENTICATED"].Value.ToString();
+
+                if (validateLOGIN.Is_Autheticated.Equals("TRUE"))
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+        }
+        public DataSet Call_Report_Procedure(CallReportProcedure callReportProcedure, ref string msgOut)
+        {
+            /*
+                PACKAGE pkg_elmah$get_error_NEW
+            PROCEDURE GET_ELMAH_ERROR_NEW
+    (
+                           PI_TRAN_ID      IN  VARCHAR2,
+                           PI_APP_NAME     IN  VARCHAR2,
+                           PI_STATUS_CODE  IN NUMBER,
+                           PI_START_DATE   IN TIMESTAMP,
+                           PI_END_DATE     IN TIMESTAMP,                            
+                           PO_REF_CURSOR   OUT SYS_REFCURSOR,
+                           PCODE           OUT VARCHAR2,
+                           PDESC           OUT VARCHAR2,
+                           PMSG            OUT VARCHAR2
+    );
+
+            */
+            DataSet DS = new DataSet();
+            DataTable dt = new DataTable();
+
+            try
+            {
+                //string Constr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionStringOra"].ToString();
+                OracleConnection con = new OracleConnection(_connectionString);
+                OracleCommand cmd = new OracleCommand("pkg_elmah$get_error_NEW.GET_ELMAH_ERROR_NEW", con);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                OracleParameter PI_TRAN_ID = new OracleParameter("PI_TRAN_ID", OracleDbType.Varchar2);
+                PI_TRAN_ID.Direction = ParameterDirection.Input;
+
+                if (callReportProcedure.TranID != "") PI_TRAN_ID.Value = callReportProcedure.TranID;
+                else PI_TRAN_ID.Value = DBNull.Value;
+                cmd.Parameters.Add(PI_TRAN_ID);
+
+                OracleParameter PI_APP_NAME = new OracleParameter("PI_APP_NAME", OracleDbType.Varchar2);
+                PI_APP_NAME.Direction = ParameterDirection.Input;
+
+                if (callReportProcedure.ChannelType != "") PI_APP_NAME.Value = callReportProcedure.ChannelType;
+                else PI_APP_NAME.Value = DBNull.Value;
+                cmd.Parameters.Add(PI_APP_NAME);
+
+                OracleParameter PI_STATUS_CODE = new OracleParameter("PI_STATUS_CODE", OracleDbType.Int16);
+                PI_STATUS_CODE.Direction = ParameterDirection.Input;
+
+                if (callReportProcedure.API_name != "") PI_STATUS_CODE.Value = callReportProcedure.API_name;
+                else PI_STATUS_CODE.Value = DBNull.Value;
+                cmd.Parameters.Add(PI_STATUS_CODE);
+
+                OracleParameter PI_START_DATE = new OracleParameter("PI_START_DATE", OracleDbType.TimeStamp);
+                PI_START_DATE.Direction = ParameterDirection.Input;
+
+                if (callReportProcedure.StartDate.HasValue) PI_START_DATE.Value = callReportProcedure.StartDate;
+                else PI_START_DATE.Value = DBNull.Value;
+                cmd.Parameters.Add(PI_START_DATE);
+
+                OracleParameter PI_END_DATE = new OracleParameter("PI_END_DATE", OracleDbType.TimeStamp);
+                PI_END_DATE.Direction = ParameterDirection.Input;
+
+                if (callReportProcedure.EndDate.HasValue) PI_END_DATE.Value = callReportProcedure.EndDate;
+                else PI_END_DATE.Value = DBNull.Value;
+                cmd.Parameters.Add(PI_END_DATE);
+
+
+                cmd.Parameters.Add(new OracleParameter { ParameterName = "PO_REF_CURSOR", OracleDbType = OracleDbType.RefCursor, Direction = System.Data.ParameterDirection.Output });
+                cmd.Parameters.Add(new OracleParameter { ParameterName = "PCUR_STATUS_CODE", OracleDbType = OracleDbType.RefCursor, Direction = System.Data.ParameterDirection.Output });
+                cmd.Parameters.Add(new OracleParameter { ParameterName = "PCODE", OracleDbType = OracleDbType.Varchar2, Direction = System.Data.ParameterDirection.Output, Size = 1000 });
+                cmd.Parameters.Add(new OracleParameter { ParameterName = "PDESC", OracleDbType = OracleDbType.Varchar2, Direction = System.Data.ParameterDirection.Output, Size = 1000 });
+                cmd.Parameters.Add(new OracleParameter { ParameterName = "PMSG", OracleDbType = OracleDbType.Varchar2, Direction = System.Data.ParameterDirection.Output, Size = 1000 });
+
+                // OracleDataAdapter oAdapdter = new OracleDataAdapter(cmd);
+                // oAdapdter.Fill(dt);
+                DS = FillDataSet(cmd);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+
+                }
+                if (Convert.ToString(cmd.Parameters["PCODE"].Value) != "00")
+                {
+                    msgOut = Convert.ToString(cmd.Parameters["PCODE"].Value) + " DESC: " + Convert.ToString(cmd.Parameters["PDESC"].Value);
+                }
+            }
+            catch (Exception ex)
+            {
+                //GlobalInfoEpmars.LogError(ex, "GetKisanDetails/KisanDatabaseHelper", "2035", Convert.ToString(tranId), Convert.ToString(tranId));
+            }
+
+            //return dt;
+            return DS;
+        }
+        public int ExecuteNonQuery(OracleCommand cmd)
+        {
+            try
+            {
+                using (OracleConnection conn = new OracleConnection(_connectionString))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataSet FillDataSet(OracleCommand cmd)
+        {
+            try
+            {
+                using (OracleConnection conn = new OracleConnection(_connectionString))
+                {
+                    OracleDataAdapter dataAdapter = new OracleDataAdapter(cmd);
+                    cmd.Connection = conn;
+                    DataSet dataSet = new DataSet();
+                    dataAdapter.Fill(dataSet);
+                    return dataSet;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public DataTable GetAPK_Data(string FileNo)
+        {
+            string desc = string.Empty;
+            DataTable MappedDT = new DataTable();
+            OracleConnection con = null;
+            try
+            {
+               // string conn = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionStringOra"].ConnectionString;
+                using (con = new OracleConnection(_connectionString))
+                {
+
+                    using (OracleCommand cmd = new OracleCommand("PKG_APK_PUSH.PRC_GET_TMP_APK", con))
+                    {
+
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new OracleParameter { ParameterName = "PFILE_NO", OracleDbType = OracleDbType.Int32, Direction = ParameterDirection.Input, Value = Convert.ToInt32(FileNo) });
+                        cmd.Parameters.Add(new OracleParameter { ParameterName = "PCUR_TMP_APK", OracleDbType = OracleDbType.RefCursor, Direction = ParameterDirection.Output });
+                        cmd.Parameters.Add(new OracleParameter { ParameterName = "PCODE", OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Output, Size = 1000 });
+                        cmd.Parameters.Add(new OracleParameter { ParameterName = "PDESC", OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Output, Size = 1000 });
+                        cmd.Parameters.Add(new OracleParameter { ParameterName = "PMSG", OracleDbType = OracleDbType.Varchar2, Direction = ParameterDirection.Output, Size = 1000 });
+                        con.Open();
+                        OracleDataAdapter oAdapdter = new OracleDataAdapter(cmd);
+                        oAdapdter.Fill(MappedDT);
+                        if (Convert.ToString(cmd.Parameters["PCODE"].Value) == "00" || Convert.ToString(cmd.Parameters["PCODE"].Value) == "0")
+                        {
+                            desc = cmd.Parameters["PDESC"].Value.ToString();
+                        }
+                        con.Close();
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                desc = ex.Message.ToString();
+            }
+            finally
+            {
+                con.Close();
+
+
+            }
+            return MappedDT;
+        }
+        public void Insert_APK_Rec(string IMEI_No, string APK_VersionNo, string FileNo)
+        {
+         
+            string sCode = "";
+            string sDesc = "";
+            string sMsg = "";
+
+
+            OracleCommand cmd = new OracleCommand("PKG_APK_PUSH.PRC_INSERT_TMP_APK");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            OracleParameter pmd_pstpaid_no = new OracleParameter("PIMEI", OracleDbType.Varchar2);
+            pmd_pstpaid_no.Direction = ParameterDirection.Input;
+            pmd_pstpaid_no.Value = IMEI_No;
+            cmd.Parameters.Add(pmd_pstpaid_no);
+
+            OracleParameter pretailr_cnic = new OracleParameter("PVERSION_NO", OracleDbType.Varchar2);
+            pretailr_cnic.Direction = ParameterDirection.Input;
+            pretailr_cnic.Value = APK_VersionNo;
+            cmd.Parameters.Add(pretailr_cnic);
+
+            OracleParameter pretaelr_id = new OracleParameter("PFILE_NO", OracleDbType.Varchar2);
+            pretaelr_id.Direction = ParameterDirection.Input;
+            pretaelr_id.Value = FileNo;
+            cmd.Parameters.Add(pretaelr_id);
+
+            OracleParameter pCODE = new OracleParameter("PCODE", OracleDbType.Varchar2);
+            pCODE.Size = 1000;
+            pCODE.Direction = ParameterDirection.Output;
+            cmd.Parameters.Add(pCODE);
+
+            OracleParameter pDesc = new OracleParameter("PDESC", OracleDbType.Varchar2);
+            pDesc.Direction = ParameterDirection.Output;
+            pDesc.Size = 1000;
+            cmd.Parameters.Add(pDesc);
+
+            OracleParameter pMSG = new OracleParameter("PMSG", OracleDbType.Varchar2);
+            pMSG.Direction = ParameterDirection.Output;
+            pMSG.Size = 1000;
+            cmd.Parameters.Add(pMSG);
+
+
+            try
+            {
+                ExecuteNonQuery(cmd);
+                sMsg = cmd.Parameters["PMSG"].Value.ToString();
+                sCode = cmd.Parameters["PCODE"].Value.ToString();
+                sDesc = cmd.Parameters["PDESC"].Value.ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                cmd.Dispose();
+                cmd = null;
+            }
+
         }
     }
 }
