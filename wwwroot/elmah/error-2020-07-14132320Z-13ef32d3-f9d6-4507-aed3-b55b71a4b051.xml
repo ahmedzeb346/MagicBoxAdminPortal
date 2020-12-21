@@ -1,0 +1,26 @@
+﻿<error errorId="13ef32d3-f9d6-4507-aed3-b55b71a4b051" application="MagicBoxAdminPortal" host="AK-SWD-0021" type="System.Exception" message="Date : 7/14/2020 6:23:20 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : IR_CashWithdrawal/ReportRepository&#xD;&#xA;Error : Connection request timed out&#xD;&#xA;Error Trace:    at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)&#xD;&#xA;   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()&#xD;&#xA;   at MagicBoxAdminPortal.Repositories.ReportRepo.ReportRepository.IR_CashWithdrawal(GetIR_CashWithdrawalRequest Req) in H:\AKSA Projects\MagicBox\MagicBoxAdminPortal\Repositories\ReportRepo\ReportRepository.cs:line 682&#xD;&#xA;" source="IR_CashWithdrawal/ReportRepository" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;System.Exception: Date : 7/14/2020 6:23:20 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : IR_CashWithdrawal/ReportRepository&#xD;&#xA;Error : Connection request timed out&#xD;&#xA;Error Trace:    at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)&#xD;&#xA;   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()&#xD;&#xA;   at MagicBoxAdminPortal.Repositories.ReportRepo.ReportRepository.IR_CashWithdrawal(GetIR_CashWithdrawalRequest Req) in H:\AKSA Projects\MagicBox\MagicBoxAdminPortal\Repositories\ReportRepo\ReportRepository.cs:line 682&#xD;&#xA;" time="2020-07-14T13:23:20.1631699Z">
+  <serverVariables>
+    <item name="Revision">
+      <value string="4" />
+    </item>
+    <item name="IsReadOnly">
+      <value string="False" />
+    </item>
+    <item name="Item" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id" />
+    <item name="Connection_RemoteIpAddress" />
+    <item name="Connection_RemotePort">
+      <value string="0" />
+    </item>
+    <item name="Connection_LocalIpAddress" />
+    <item name="Connection_LocalPort">
+      <value string="0" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="0" />
+    </item>
+  </serverVariables>
+</error>

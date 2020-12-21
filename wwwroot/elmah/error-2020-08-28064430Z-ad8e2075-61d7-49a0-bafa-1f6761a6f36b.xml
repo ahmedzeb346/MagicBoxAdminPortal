@@ -1,0 +1,105 @@
+﻿<error errorId="ad8e2075-61d7-49a0-bafa-1f6761a6f36b" application="MagicBoxAdminPortal" host="AK-SWL-0122" type="HTTP" message="NotFound" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;ElmahCore.HttpException: NotFound" time="2020-08-28T06:44:30.8210296Z" statusCode="404">
+  <serverVariables>
+    <item name="HttpVersion">
+      <value string="1.1" />
+    </item>
+    <item name="Scheme">
+      <value string="http" />
+    </item>
+    <item name="Method">
+      <value string="POST" />
+    </item>
+    <item name="PathBase">
+      <value string="" />
+    </item>
+    <item name="Path">
+      <value string="/User​/AddUser" />
+    </item>
+    <item name="QueryString">
+      <value string="" />
+    </item>
+    <item name="RawTarget">
+      <value string="/User%E2%80%8B/AddUser" />
+    </item>
+    <item name="HasResponseStarted">
+      <value string="False" />
+    </item>
+    <item name="RemoteIpAddress" />
+    <item name="RemotePort">
+      <value string="0" />
+    </item>
+    <item name="LocalIpAddress" />
+    <item name="LocalPort">
+      <value string="0" />
+    </item>
+    <item name="RequestConnectionId" />
+    <item name="TraceIdentifier">
+      <value string="8000000b-0000-f300-b63f-84710c7967bb" />
+    </item>
+    <item name="RequestBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpRequestStream" />
+    </item>
+    <item name="ResponseBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream" />
+    </item>
+    <item name="ResponsePipeWrapper" />
+    <item name="Header_Accept">
+      <value string="*/*" />
+    </item>
+    <item name="Header_Accept-Encoding">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="Header_Authorization">
+      <value string="Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIxOTAiLCJNU0lTRE4iOiI5MjMzNDY0NTE5NDciLCJFbWFpbEFkZHJlc3MiOiJRYXNpbTQ4MDVAZ21haWwuY29tIiwiVXNlck5hbWUiOiJBZG5hbiIsIlVzZXJBY3Rpdml0eSI6IlN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkxpc3RgMVtUbWZiX1BvcnRhbF9BUEkuTW9kZWxzLk1lbnVdIiwibmJmIjoxNTk4NTk2NzIwLCJleHAiOjE1OTg1OTk3MjAsImlhdCI6MTU5ODU5NjcyMH0.WQ6IOcdFjEOhH3_g4rFOO2m4VRyt3MumnHWzSSuC8V8" />
+    </item>
+    <item name="Header_Cache-Control">
+      <value string="no-cache" />
+    </item>
+    <item name="Header_Connection">
+      <value string="keep-alive" />
+    </item>
+    <item name="Header_Content-Length">
+      <value string="300" />
+    </item>
+    <item name="Header_Content-Type">
+      <value string="application/json" />
+    </item>
+    <item name="Header_Host">
+      <value string="localhost:55782" />
+    </item>
+    <item name="Header_User-Agent">
+      <value string="PostmanRuntime/7.26.2" />
+    </item>
+    <item name="Header_Postman-Token">
+      <value string="6e1cd958-e6c3-4aba-a59a-b314c5742cf3" />
+    </item>
+    <item name="MaxRequestBodySize">
+      <value string="30000000" />
+    </item>
+    <item name="StatusCode">
+      <value string="404" />
+    </item>
+    <item name="ReasonPhrase" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id">
+      <value string="17509995352827101193" />
+    </item>
+    <item name="Connection_RemoteIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_RemotePort">
+      <value string="63865" />
+    </item>
+    <item name="Connection_LocalIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_LocalPort">
+      <value string="55782" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="404" />
+    </item>
+  </serverVariables>
+</error>

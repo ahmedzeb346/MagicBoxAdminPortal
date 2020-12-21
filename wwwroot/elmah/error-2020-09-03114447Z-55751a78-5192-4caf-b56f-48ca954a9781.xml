@@ -1,0 +1,120 @@
+﻿<error errorId="55751a78-5192-4caf-b56f-48ca954a9781" application="MagicBoxAdminPortal" host="AK-SWL-0122" type="System.InvalidOperationException" message="ValidationVisitor exceeded the maximum configured validation depth '32' when validating type 'MagicBoxAdminPortal.Models.Retailer'. This may indicate a very deep or infinitely recursive object graph. Consider modifying 'MvcOptions.MaxValidationDepth' or suppressing validation on the model type." source="Microsoft.AspNetCore.Mvc.Core" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;System.InvalidOperationException: ValidationVisitor exceeded the maximum configured validation depth '32' when validating type 'MagicBoxAdminPortal.Models.Retailer'. This may indicate a very deep or infinitely recursive object graph. Consider modifying 'MvcOptions.MaxValidationDepth' or suppressing validation on the model type.&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Validate(ModelMetadata metadata, String key, Object model, Boolean alwaysValidateAtTopLevel)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.&lt;&gt;c__DisplayClass0_0.&lt;&lt;CreateBinderDelegate&gt;g__Bind|0&gt;d.MoveNext()&#xD;&#xA;--- End of stack trace from previous location where exception was thrown ---&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeInnerFilterAsync&gt;g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)&#xD;&#xA;   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Logged|17_1(ResourceInvoker invoker)&#xD;&#xA;   at Microsoft.AspNetCore.Routing.EndpointMiddleware.&lt;Invoke&gt;g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)&#xD;&#xA;   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)&#xD;&#xA;   at ElmahCore.Mvc.ErrorLogMiddleware.Invoke(HttpContext context, Func`1 next)" time="2020-09-03T11:44:47.0627677Z">
+  <serverVariables>
+    <item name="HttpVersion">
+      <value string="1.1" />
+    </item>
+    <item name="Scheme">
+      <value string="http" />
+    </item>
+    <item name="Method">
+      <value string="POST" />
+    </item>
+    <item name="PathBase">
+      <value string="" />
+    </item>
+    <item name="Path">
+      <value string="/Retailer/RetailerBulkUpload" />
+    </item>
+    <item name="QueryString">
+      <value string="" />
+    </item>
+    <item name="RawTarget">
+      <value string="/Retailer/RetailerBulkUpload" />
+    </item>
+    <item name="HasResponseStarted">
+      <value string="False" />
+    </item>
+    <item name="RemoteIpAddress" />
+    <item name="RemotePort">
+      <value string="0" />
+    </item>
+    <item name="LocalIpAddress" />
+    <item name="LocalPort">
+      <value string="0" />
+    </item>
+    <item name="RequestConnectionId" />
+    <item name="TraceIdentifier">
+      <value string="80000074-0001-fc00-b63f-84710c7967bb" />
+    </item>
+    <item name="RequestBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpRequestStream" />
+    </item>
+    <item name="ResponseBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream" />
+    </item>
+    <item name="ResponsePipeWrapper" />
+    <item name="Header_Accept">
+      <value string="text/plain" />
+    </item>
+    <item name="Header_Accept-Encoding">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="Header_Accept-Language">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="Header_Cache-Control">
+      <value string="no-cache" />
+    </item>
+    <item name="Header_Connection">
+      <value string="keep-alive" />
+    </item>
+    <item name="Header_Content-Length">
+      <value string="441092" />
+    </item>
+    <item name="Header_Content-Type">
+      <value string="application/json-patch+json" />
+    </item>
+    <item name="Header_Host">
+      <value string="localhost:55782" />
+    </item>
+    <item name="Header_Pragma">
+      <value string="no-cache" />
+    </item>
+    <item name="Header_Referer">
+      <value string="http://localhost:55782/help/index.html" />
+    </item>
+    <item name="Header_User-Agent">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36" />
+    </item>
+    <item name="Header_Origin">
+      <value string="http://localhost:55782" />
+    </item>
+    <item name="Header_Sec-Fetch-Site">
+      <value string="same-origin" />
+    </item>
+    <item name="Header_Sec-Fetch-Mode">
+      <value string="cors" />
+    </item>
+    <item name="Header_Sec-Fetch-Dest">
+      <value string="empty" />
+    </item>
+    <item name="MaxRequestBodySize">
+      <value string="9223372036854775807" />
+    </item>
+    <item name="StatusCode">
+      <value string="200" />
+    </item>
+    <item name="ReasonPhrase" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id">
+      <value string="18158513703463420017" />
+    </item>
+    <item name="Connection_RemoteIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_RemotePort">
+      <value string="59324" />
+    </item>
+    <item name="Connection_LocalIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_LocalPort">
+      <value string="55782" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="0" />
+    </item>
+  </serverVariables>
+</error>

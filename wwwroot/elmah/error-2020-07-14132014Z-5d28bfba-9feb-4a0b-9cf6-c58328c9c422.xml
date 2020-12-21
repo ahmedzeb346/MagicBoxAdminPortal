@@ -1,0 +1,119 @@
+﻿<error errorId="5d28bfba-9feb-4a0b-9cf6-c58328c9c422" application="MagicBoxAdminPortal" host="AK-SWD-0021" type="HTTP" message="NotFound" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;ElmahCore.HttpException: NotFound" time="2020-07-14T13:20:14.3536999Z" statusCode="404">
+  <serverVariables>
+    <item name="HttpVersion">
+      <value string="1.1" />
+    </item>
+    <item name="Scheme">
+      <value string="http" />
+    </item>
+    <item name="Method">
+      <value string="GET" />
+    </item>
+    <item name="PathBase">
+      <value string="" />
+    </item>
+    <item name="Path">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="QueryString">
+      <value string="" />
+    </item>
+    <item name="RawTarget">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="HasResponseStarted">
+      <value string="False" />
+    </item>
+    <item name="RemoteIpAddress" />
+    <item name="RemotePort">
+      <value string="0" />
+    </item>
+    <item name="LocalIpAddress" />
+    <item name="LocalPort">
+      <value string="0" />
+    </item>
+    <item name="RequestConnectionId" />
+    <item name="TraceIdentifier">
+      <value string="8000001b-0000-f700-b63f-84710c7967bb" />
+    </item>
+    <item name="RequestBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpRequestStream" />
+    </item>
+    <item name="ResponseBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream" />
+    </item>
+    <item name="ResponsePipeWrapper" />
+    <item name="Header_Accept">
+      <value string="image/webp,image/apng,image/*,*/*;q=0.8" />
+    </item>
+    <item name="Header_Accept-Encoding">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="Header_Accept-Language">
+      <value string="en-PK,en-US;q=0.9,en;q=0.8" />
+    </item>
+    <item name="Header_Connection">
+      <value string="keep-alive" />
+    </item>
+    <item name="Header_Cookie">
+      <value string="__RequestVerificationToken=DFzZ3ZPE03DlZKASF4vDO2OsiqBEqupkuutX7EP0W_MgowkAo3mXOT16WNZeWQWp_MlCjgXDc8ATAlxd-iy1ZpTRBINgfTLR8nE1Zu7qhmQ1; ASP.NET_SessionId=fzm3e4atcov4bpvr3e15dxnv; RefreshFilter=https://localhost:44384/Captcha/GetCaptchaImag" />
+    </item>
+    <item name="Header_Host">
+      <value string="localhost:55782" />
+    </item>
+    <item name="Header_Referer">
+      <value string="http://localhost:55782/weatherforecast" />
+    </item>
+    <item name="Header_User-Agent">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36" />
+    </item>
+    <item name="Header_Sec-Fetch-Site">
+      <value string="same-origin" />
+    </item>
+    <item name="Header_Sec-Fetch-Mode">
+      <value string="no-cors" />
+    </item>
+    <item name="Header_Sec-Fetch-Dest">
+      <value string="image" />
+    </item>
+    <item name="MaxRequestBodySize">
+      <value string="30000000" />
+    </item>
+    <item name="StatusCode">
+      <value string="404" />
+    </item>
+    <item name="ReasonPhrase" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id">
+      <value string="17798225728978812953" />
+    </item>
+    <item name="Connection_RemoteIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_RemotePort">
+      <value string="64126" />
+    </item>
+    <item name="Connection_LocalIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_LocalPort">
+      <value string="55782" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="404" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="__RequestVerificationToken">
+      <value string="DFzZ3ZPE03DlZKASF4vDO2OsiqBEqupkuutX7EP0W_MgowkAo3mXOT16WNZeWQWp_MlCjgXDc8ATAlxd-iy1ZpTRBINgfTLR8nE1Zu7qhmQ1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="fzm3e4atcov4bpvr3e15dxnv" />
+    </item>
+    <item name="RefreshFilter">
+      <value string="https://localhost:44384/Captcha/GetCaptchaImag" />
+    </item>
+  </cookies>
+</error>

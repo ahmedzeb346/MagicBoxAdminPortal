@@ -1,0 +1,26 @@
+﻿<error errorId="b0f78817-04df-4680-9fbc-ad96582a0300" application="MagicBoxAdminPortal" host="AK-SWL-0056" type="System.Exception" message="Date : 6/17/2020 10:00:54 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : GetActivities/ProfileRepository&#xD;&#xA;Error : Connection request timed out&#xD;&#xA;Error Trace:    at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)&#xD;&#xA;   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()&#xD;&#xA;   at MagicBoxAdminPortal.Repositories.ProfileRepo.ProfileRepository.GetActivities(GetActivitiesRequest req) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Repositories\ProfileRepo\ProfileRepository.cs:line 489&#xD;&#xA;" source="GetActivities/ProfileRepository" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;System.Exception: Date : 6/17/2020 10:00:54 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : GetActivities/ProfileRepository&#xD;&#xA;Error : Connection request timed out&#xD;&#xA;Error Trace:    at OracleInternal.ConnectionPool.PoolManager`3.Get(ConnectionString csWithDiffOrNewPwd, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OraclePoolManager.Get(ConnectionString csWithNewPassword, Boolean bGetForApp, OracleConnection connRefForCriteria, String affinityInstanceName, Boolean bForceMatch)&#xD;&#xA;   at OracleInternal.ConnectionPool.OracleConnectionDispenser`3.Get(ConnectionString cs, PM conPM, ConnectionString pmCS, SecureString securedPassword, SecureString securedProxyPassword, OracleConnection connRefForCriteria)&#xD;&#xA;   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()&#xD;&#xA;   at MagicBoxAdminPortal.Repositories.ProfileRepo.ProfileRepository.GetActivities(GetActivitiesRequest req) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Repositories\ProfileRepo\ProfileRepository.cs:line 489&#xD;&#xA;" time="2020-06-17T05:00:55.2105013Z">
+  <serverVariables>
+    <item name="Revision">
+      <value string="4" />
+    </item>
+    <item name="IsReadOnly">
+      <value string="False" />
+    </item>
+    <item name="Item" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id" />
+    <item name="Connection_RemoteIpAddress" />
+    <item name="Connection_RemotePort">
+      <value string="0" />
+    </item>
+    <item name="Connection_LocalIpAddress" />
+    <item name="Connection_LocalPort">
+      <value string="0" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="0" />
+    </item>
+  </serverVariables>
+</error>

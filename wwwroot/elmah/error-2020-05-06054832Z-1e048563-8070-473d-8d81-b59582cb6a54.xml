@@ -1,0 +1,26 @@
+﻿<error errorId="1e048563-8070-473d-8d81-b59582cb6a54" application="MagicBoxAdminPortal" host="AK-SWL-0056" type="System.Exception" message="Date : 5/6/2020 10:48:32 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : GetRetailerByID/RetailerRepository&#xD;&#xA;Error : Column 'CREATED' does not belong to table .&#xD;&#xA;Error Trace:    at System.Data.DataRow.GetDataColumn(String columnName)&#xD;&#xA;   at System.Data.DataRow.get_Item(String columnName)&#xD;&#xA;   at Repositories.RetailerRepo.RetailerRepository.GetRetailerByID(GetRetailerByIDRequest retailer) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Repositories\RetailerRepo\RetailerRepository.cs:line 415&#xD;&#xA;" source="GetRetailerByID/RetailerRepository" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;System.Exception: Date : 5/6/2020 10:48:32 AM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : GetRetailerByID/RetailerRepository&#xD;&#xA;Error : Column 'CREATED' does not belong to table .&#xD;&#xA;Error Trace:    at System.Data.DataRow.GetDataColumn(String columnName)&#xD;&#xA;   at System.Data.DataRow.get_Item(String columnName)&#xD;&#xA;   at Repositories.RetailerRepo.RetailerRepository.GetRetailerByID(GetRetailerByIDRequest retailer) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Repositories\RetailerRepo\RetailerRepository.cs:line 415&#xD;&#xA;" time="2020-05-06T05:48:32.7216567Z">
+  <serverVariables>
+    <item name="Revision">
+      <value string="4" />
+    </item>
+    <item name="IsReadOnly">
+      <value string="False" />
+    </item>
+    <item name="Item" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id" />
+    <item name="Connection_RemoteIpAddress" />
+    <item name="Connection_RemotePort">
+      <value string="0" />
+    </item>
+    <item name="Connection_LocalIpAddress" />
+    <item name="Connection_LocalPort">
+      <value string="0" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="0" />
+    </item>
+  </serverVariables>
+</error>

@@ -1,0 +1,26 @@
+﻿<error errorId="2cf15d86-94c1-45f5-bc10-22b28dd1be44" application="MagicBoxAdminPortal" host="AK-SWL-0056" type="System.Exception" message="Date : 4/25/2020 12:48:29 PM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : AddRetailer/RetailerController&#xD;&#xA;Error : Attempted to divide by zero.&#xD;&#xA;Error Trace:    at MagicBoxAdminPortal.Controllers.RetailerController.AddRetailer(AddRetailerRequest requestAddRetailer) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Controllers\RetailerController.cs:line 61&#xD;&#xA;" source="AddRetailer/RetailerController" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;System.Exception: Date : 4/25/2020 12:48:29 PM&#xD;&#xA;ErrorCode : 2035&#xD;&#xA;User : &#xD;&#xA;Method/Module : AddRetailer/RetailerController&#xD;&#xA;Error : Attempted to divide by zero.&#xD;&#xA;Error Trace:    at MagicBoxAdminPortal.Controllers.RetailerController.AddRetailer(AddRetailerRequest requestAddRetailer) in D:\Office Work\MagicBox\MagicBoxAdminPortal\Controllers\RetailerController.cs:line 61&#xD;&#xA;" time="2020-04-25T07:48:29.8046630Z">
+  <serverVariables>
+    <item name="Revision">
+      <value string="4" />
+    </item>
+    <item name="IsReadOnly">
+      <value string="False" />
+    </item>
+    <item name="Item" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id" />
+    <item name="Connection_RemoteIpAddress" />
+    <item name="Connection_RemotePort">
+      <value string="0" />
+    </item>
+    <item name="Connection_LocalIpAddress" />
+    <item name="Connection_LocalPort">
+      <value string="0" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="0" />
+    </item>
+  </serverVariables>
+</error>

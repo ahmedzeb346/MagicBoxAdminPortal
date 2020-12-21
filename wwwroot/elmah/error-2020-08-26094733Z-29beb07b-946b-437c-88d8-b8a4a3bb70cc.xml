@@ -1,0 +1,111 @@
+﻿<error errorId="29beb07b-946b-437c-88d8-b8a4a3bb70cc" application="MagicBoxAdminPortal" host="AK-SWL-0122" type="HTTP" message="NotFound" detail="# caller: @C:\Sources\ElmahCore\ElmahCore\Internal$\CallerInfo.cs:10&#xD;&#xA;ElmahCore.HttpException: NotFound" time="2020-08-26T09:47:33.3331739Z" statusCode="404">
+  <serverVariables>
+    <item name="HttpVersion">
+      <value string="1.1" />
+    </item>
+    <item name="Scheme">
+      <value string="http" />
+    </item>
+    <item name="Method">
+      <value string="GET" />
+    </item>
+    <item name="PathBase">
+      <value string="" />
+    </item>
+    <item name="Path">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="QueryString">
+      <value string="" />
+    </item>
+    <item name="RawTarget">
+      <value string="/favicon.ico" />
+    </item>
+    <item name="HasResponseStarted">
+      <value string="False" />
+    </item>
+    <item name="RemoteIpAddress" />
+    <item name="RemotePort">
+      <value string="0" />
+    </item>
+    <item name="LocalIpAddress" />
+    <item name="LocalPort">
+      <value string="0" />
+    </item>
+    <item name="RequestConnectionId" />
+    <item name="TraceIdentifier">
+      <value string="8000001a-0002-fb00-b63f-84710c7967bb" />
+    </item>
+    <item name="RequestBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpRequestStream" />
+    </item>
+    <item name="ResponseBody">
+      <value string="Microsoft.AspNetCore.Server.IIS.Core.HttpResponseStream" />
+    </item>
+    <item name="ResponsePipeWrapper" />
+    <item name="Header_Accept">
+      <value string="image/webp,image/apng,image/*,*/*;q=0.8" />
+    </item>
+    <item name="Header_Accept-Encoding">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="Header_Accept-Language">
+      <value string="en-US,en;q=0.9" />
+    </item>
+    <item name="Header_Cache-Control">
+      <value string="no-cache" />
+    </item>
+    <item name="Header_Connection">
+      <value string="keep-alive" />
+    </item>
+    <item name="Header_Host">
+      <value string="localhost:55782" />
+    </item>
+    <item name="Header_Pragma">
+      <value string="no-cache" />
+    </item>
+    <item name="Header_Referer">
+      <value string="http://localhost:55782/weatherforecast" />
+    </item>
+    <item name="Header_User-Agent">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" />
+    </item>
+    <item name="Header_Sec-Fetch-Site">
+      <value string="same-origin" />
+    </item>
+    <item name="Header_Sec-Fetch-Mode">
+      <value string="no-cors" />
+    </item>
+    <item name="Header_Sec-Fetch-Dest">
+      <value string="image" />
+    </item>
+    <item name="MaxRequestBodySize">
+      <value string="30000000" />
+    </item>
+    <item name="StatusCode">
+      <value string="404" />
+    </item>
+    <item name="ReasonPhrase" />
+    <item name="User_ClaimsPrincipalSelector" />
+    <item name="User_Current" />
+    <item name="Connection_Id">
+      <value string="18086456113720459288" />
+    </item>
+    <item name="Connection_RemoteIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_RemotePort">
+      <value string="55728" />
+    </item>
+    <item name="Connection_LocalIpAddress">
+      <value string="::1" />
+    </item>
+    <item name="Connection_LocalPort">
+      <value string="55782" />
+    </item>
+    <item name="Connection_ClientCertificate" />
+    <item name="HttpStatusCode">
+      <value string="404" />
+    </item>
+  </serverVariables>
+</error>
