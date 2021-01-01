@@ -424,8 +424,9 @@ namespace MagicBoxAdminPortal.Repositories.Support
         }
 
 
-        public bool Check_MNP_file(DataTable dt, ref string msg, ref DataTable dtError)
+        public BaseResponse Check_MNP_file(DataTable dtt,  string msg,  DataTable dtError)
         {
+            BaseResponse response = new BaseResponse();
             bool result = false;
             dtError = new DataTable();
             string count_Columns = "26";
@@ -472,9 +473,9 @@ namespace MagicBoxAdminPortal.Repositories.Support
 
 
 
-                if (dt.Rows.Count > 0)
+                if (dtt.Rows.Count > 0)
                 {
-                    foreach (DataRow row in dt.Rows)
+                    foreach (DataRow row in dtt.Rows)
                     {
                         string BIZ_PARTNER_ID = row["BIZ_PARTNER_ID"].ToString();
                         string BIZ_PARTNER_CODE = row["BIZ_PARTNER_CODE"].ToString();
@@ -545,8 +546,8 @@ namespace MagicBoxAdminPortal.Repositories.Support
                 {
                     msg = "File is Empty or Incorrect.";
                     result = false;
-
-                    return result;
+                    return new BaseResponse { IsSuccess = result };
+                    //return response.IsSuccess;
                 }
             }
             else
@@ -554,7 +555,7 @@ namespace MagicBoxAdminPortal.Repositories.Support
                 msg = "File is Empty or Incorrect.";
                 result = false;
 
-                return result;
+                return new BaseResponse { IsSuccess = result };
             }
 
 
@@ -567,7 +568,7 @@ namespace MagicBoxAdminPortal.Repositories.Support
                 result = false;
             }
 
-            return result;
+            return new BaseResponse { IsSuccess = result };
 
         }
 

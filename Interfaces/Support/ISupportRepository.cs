@@ -13,7 +13,7 @@ namespace MagicBoxAdminPortal.Interfaces.Support
         BaseResponse GetMappedData();
         bool MNP_Data_Sync(string Desc);
         DataTable Read_MNP_File(string filepath);
-        bool Check_MNP_file(DataTable dt, ref string msg, ref DataTable dtError);
+        BaseResponse Check_MNP_file(DataTable dtt,  string msg,  DataTable dtError);
         DataTable ReadExcelFile(string filepath);
         BaseResponse GetAuthentication(string username, string pwd, string uSERID, string pAGES);
         void GetErrorCode(string API_NAME,ref DataTable dt);

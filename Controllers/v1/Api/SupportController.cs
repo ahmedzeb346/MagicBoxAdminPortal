@@ -30,24 +30,24 @@ namespace MagicBoxAdminPortal.Controllers.v1.Api
         [HttpPost("MNP_Data_Sync")]
         public bool MNP_Data_Sync(string Desc)
         {
-            BaseResponse resp = new BaseResponse();
+            //BaseResponse resp = new BaseResponse();
             bool resps = _supportRepository.MNP_Data_Sync(Desc);
             return resps;
         }
         [HttpPost("Read_MNP_File")]
         public DataTable Read_MNP_File(string filepath)
         {
-            BaseResponse resp = new BaseResponse();
-            DataTable resps = _supportRepository.Read_MNP_File(filepath);
-            return resps;
+            DataTable resp = new DataTable();
+            resp = _supportRepository.Read_MNP_File(filepath);
+            return resp;
         }
-        [HttpPost("MNP_Data_Sync")]
-        public bool Check_MNP_file(DataTable dt, ref string msg, ref DataTable dtError)
-        {
-            BaseResponse resp = new BaseResponse();
-            bool resps = _supportRepository.Check_MNP_file(dt, ref msg, ref dtError);
-            return resps;
-        }
+        //[HttpPost("Check_MNP_file")]
+        //public BaseResponse Check_MNP_file(DataTable dtt, string msg, DataTable dtError)
+        //{
+        //    BaseResponse resp = new BaseResponse();
+        //    resp = _supportRepository.Check_MNP_file(dtt, msg, dtError);
+        //    return resp;
+        //}
         [HttpPost("ReadExcelFile")]
         public DataTable ReadExcelFile(string filepath)
         {
@@ -79,13 +79,13 @@ namespace MagicBoxAdminPortal.Controllers.v1.Api
             // return resp;
         }
        
-        [HttpPost("GetXMPResponse")]
-        public void PRC_GET_TRAN_DETAILS(GETTRANDETAILS gETTRANDETAILS, ref DataTable dt)
-        {
-            BaseResponse resp = new BaseResponse();
-            _supportRepository.PRC_GET_TRAN_DETAILS(gETTRANDETAILS, ref dt);
-            // return resp;
-        }
+        //[HttpPost("PRC_GET_TRAN_DETAILS")]
+        //public void PRC_GET_TRAN_DETAILS(GETTRANDETAILS gETTRANDETAILS, ref DataTable dt)
+        //{
+        //    BaseResponse resp = new BaseResponse();
+        //    _supportRepository.PRC_GET_TRAN_DETAILS(gETTRANDETAILS, ref dt);
+        //    // return resp;
+        //}
         [HttpPost("PRC_GET_DATE_TOTAL")]
         public void PRC_GET_DATE_TOTAL(string startDate, string endDate, ref DataTable dt)
         {
@@ -147,12 +147,12 @@ namespace MagicBoxAdminPortal.Controllers.v1.Api
             bool IsTrue = _supportRepository.Validate_LOGIN(validateLOGIN);
             return IsTrue;
         }
-        [HttpPost("Call_Report_Procedure")]
-        public DataSet Call_Report_Procedure(CallReportProcedure callReportProcedure, ref string msgOut)
-        {
-            DataSet DS = _supportRepository.Call_Report_Procedure(callReportProcedure , ref msgOut);
-            return DS;
-        }
+        //[HttpPost("Call_Report_Procedure")]
+        //public DataSet Call_Report_Procedure(CallReportProcedure callReportProcedure, ref string msgOut)
+        //{
+        //    DataSet DS = _supportRepository.Call_Report_Procedure(callReportProcedure , ref msgOut);
+        //    return DS;
+        //}
 
         [HttpPost("GetAPK_Data")]
         public DataTable GetAPK_Data(string FileNo)

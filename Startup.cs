@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using ElmahCore;
 using ElmahCore.Mvc;
 using MagicBoxAdminPortal.generalrepositoryinterface.CreateHashByKey;
+using MagicBoxAdminPortal.Interfaces.Support;
+using MagicBoxAdminPortal.Repositories.Support;
 using MagicBoxSupport.Repository.Interfaces.RetailerMgt;
 using MagicBoxSupport.Repository.Repositories.RetailerMgtRepository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -90,9 +92,9 @@ namespace MagicBoxAdminPortal
             //// configure jwt authentication
 
 
-
-                  services.AddTransient<IRetailerMgtRepository, RetailerMgtRepository>();
-                  services.AddTransient<ICreateHashByKey, CreateHashByKey>();
+            services.AddTransient<ISupportRepository, SupportRepository>();
+            services.AddTransient<IRetailerMgtRepository, RetailerMgtRepository>();
+            services.AddTransient<ICreateHashByKey, CreateHashByKey>();
 
         }
 
@@ -140,9 +142,10 @@ namespace MagicBoxAdminPortal
             app.UseRouting();
 
             // global cors policy
-            
-           
+
+
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+           
 
 
         }
